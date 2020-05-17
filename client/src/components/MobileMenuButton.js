@@ -1,8 +1,44 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
+
 import './MobileMenuButton.css';
 
-const useStyles = makeStyles(theme => ({}));
+const useStyles = makeStyles(theme => ({
+  ul: {
+    display: 'grid',
+    width: '90%',
+    textAlign: 'center',
+    margin: '0',
+    '& a': {
+      fontSize: '1.5em',
+      overflow: 'hidden',
+      textDecoration: 'none',
+
+      '& li': {
+        color: '#fff',
+        display: 'block',
+        padding: '5px 0'
+      }
+    },
+    '& :hover': {
+      cursor: 'pointer',
+      zIndex: '1',
+      // background: '#e2e2e2',
+      '& li': {
+        color: '#A1A1A1'
+      }
+    },
+    '& a.active': {
+      cursor: 'pointer',
+      zIndex: '1',
+      // background: '#e2e2e2',
+      '& li': {
+        color: '#A1A1A1'
+      }
+    }
+  }
+}));
 
 const MobileMenuButton = () => {
   const classes = useStyles();
@@ -17,13 +53,24 @@ const MobileMenuButton = () => {
         <main>
           <nav>
             <div className="nav-wrap">
-              {/* <img className="logo-main" src={logo} alt="logo"/> */}
               <div className="nav-element-wrap">
-                <div className="nav-elements">
-                  <a href="" target="_blank" rel="noopener noreferrer" alt="">
-                    RESUME
-                  </a>
-                </div>
+                <ul className={classes.ul}>
+                  <NavLink to="/about" exact>
+                    <li>About</li>
+                  </NavLink>
+                  <NavLink to="/portfolio" exact>
+                    <li>Portfolio</li>
+                  </NavLink>
+                  <NavLink to="/skills" exact>
+                    <li>Skills</li>
+                  </NavLink>
+                  <NavLink to="/education" exact>
+                    <li>Education</li>
+                  </NavLink>
+                  <NavLink to="/contact" exact>
+                    <li>Contact</li>
+                  </NavLink>
+                </ul>
               </div>
             </div>
           </nav>

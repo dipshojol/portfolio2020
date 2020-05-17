@@ -54,7 +54,7 @@ body #root div.hamburger > div:after {
   top: 8px;
 }
 body #root .toggle:checked ~ main nav .nav-wrap .nav-element-wrap {
-  left: 0;
+  height: 100%;
 }
 body #root .toggle:checked ~ main .main-container {
   left: 5%;
@@ -71,13 +71,13 @@ body #root nav div.nav-wrap {
   align-content: center;
 }
 body #root nav div.nav-wrap .nav-element-wrap {
-  background: #042c41;
-  height: 100vh;
+  background: #565656;
+  /* height: 100vh; */
   width: 100%;
   display: grid;
   align-content: center;
   position: fixed;
-  left: -100%;
+  height: 0%;
   overflow: hidden;
   transition: 0.4s ease;
 }

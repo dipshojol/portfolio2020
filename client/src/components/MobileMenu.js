@@ -6,7 +6,7 @@ import MobileMenuButton from './MobileMenuButton';
 
 const useStyles = makeStyles(theme => ({
   nav: {
-    background: '#042c41',
+    background: '#565656',
     height: '50px',
     overflow: 'hidden',
     display: 'grid',
