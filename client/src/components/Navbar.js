@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
   nav: {
     fontFamily: "'Teko', sans-serif",
     fontSize: '1.1rem',
-    background: '#A1A1A1',
+    background: '#565656',
     height: '60px',
     overflow: 'hidden',
     display: 'grid',
@@ -19,6 +19,11 @@ const useStyles = makeStyles(theme => ({
     display: 'grid',
     placeContent: 'center',
     height: 'inherit',
+    '& a': {
+      display: 'grid',
+      placeContent: 'center',
+      cursor: 'pointer'
+    },
     '& img': {
       maxWidth: 75
     }
@@ -82,7 +87,9 @@ const Navbar = () => {
     <>
       <nav className={classes.nav}>
         <div className={classes.logoWrapper}>
-          <img src={myLogo} alt="myLogo" />
+          <NavLink to="/">
+            <img src={myLogo} alt="myLogo" />
+          </NavLink>
         </div>
         <ul className={classes.ul}>
           <NavLink to="/about" exact>

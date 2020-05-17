@@ -28,17 +28,19 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '10px',
     '& h5': {
       fontSize: '3rem',
-      margin: 0
+      margin: 0,
+      color: '#565656'
     },
     '& h1': {
-      color: '#555',
-      fontSize: '6rem',
+      color: '#8b8b8b',
+      fontSize: '7rem',
       margin: 0,
       fontFamily: "'Zilla Slab Highlight', cursive"
     },
     '& h6': {
       fontSize: '2rem',
-      margin: 0
+      margin: 0,
+      color: '#202020'
     }
   }
 }));
@@ -55,10 +57,8 @@ const HomePage = () => {
         </div>
         <div className={classes.rightSection}>
           <h5>Hello,_I'm</h5>
-          <h1>
-            Shojol
-            <br /> Shake
-          </h1>
+          <h1>Shojol</h1>
+          <h1>Shake</h1>
           <h6>I_create_websites_and_applications</h6>
         </div>
       </div>
