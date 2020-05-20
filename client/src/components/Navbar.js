@@ -37,6 +37,7 @@ const useStyles = makeStyles(theme => ({
     justifySelf: 'end',
     textAlign: 'center',
     margin: '0',
+
     '& a': {
       border: '1px solid #fff',
       transform: 'rotate(25deg)',
@@ -54,26 +55,33 @@ const useStyles = makeStyles(theme => ({
       },
       '& span': {
         position: 'absolute',
-        left: '0',
+        left: -20,
         top: '0',
         transform: 'rotate(-25deg)',
-        width: '100%'
+        width: '135%',
+        transition: 'all .4s ease'
+
+        // opacity: 0.5
       }
     },
     '& :hover': {
       cursor: 'pointer',
       zIndex: '1',
-      background: '#e2e2e2',
-      '& li': {
-        color: '#A1A1A1'
-      }
+      // background: '#e2e2e2',
+      transition: 'all .4s ease',
+      color: '#A1A1A1',
+      letterSpacing: 2
     },
     '& a.active': {
       cursor: 'pointer',
       zIndex: '1',
       background: '#e2e2e2',
+      '& span': {
+        transition: 'all .4s ease',
+        opacity: 1
+      },
       '& li': {
-        color: '#A1A1A1'
+        color: '#565656'
       }
     }
   }

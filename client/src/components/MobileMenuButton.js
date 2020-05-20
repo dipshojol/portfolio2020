@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { NavLink } from 'react-router-dom';
+import { TweenMax, Power3 } from 'gsap';
 
 import './MobileMenuButton.css';
 
 const useStyles = makeStyles(theme => ({
   ul: {
     display: 'grid',
-    width: '90%',
+    // width: '90%',
     textAlign: 'center',
+    placeContent: 'center',
     margin: '0',
+    padding: '0',
     '& a': {
       fontSize: '1.5em',
       overflow: 'hidden',
@@ -42,6 +45,17 @@ const useStyles = makeStyles(theme => ({
 
 const MobileMenuButton = () => {
   const classes = useStyles();
+  let item1 = useRef(null);
+
+  // useEffect(() => {
+  //   console.log(item1.current);
+  //   TweenMax.fromTo(
+  //     item1.current,
+  //     7,
+  //     { opacity: 0, x: +50 },
+  //     { opacity: 1, x: 0 }
+  //   );
+  // }, []);
 
   return (
     <>
@@ -55,7 +69,7 @@ const MobileMenuButton = () => {
             <div className="nav-wrap">
               <div className="nav-element-wrap">
                 <ul className={classes.ul}>
-                  <NavLink to="/about" exact>
+                  <NavLink ref={item1} to="/about" exact>
                     <li>About</li>
                   </NavLink>
                   <NavLink to="/portfolio" exact>
