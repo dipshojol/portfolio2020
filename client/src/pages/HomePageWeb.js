@@ -3,6 +3,7 @@ import myPhoto from '../images/photoBW.png';
 import useStyles from './HomePageStyle';
 import AboutMe from './AboutMe';
 import { TweenMax, Power3 } from 'gsap';
+// import './HomePageArrow.css';
 
 const HomePageWeb = () => {
   const landingWrap = useRef(null);
@@ -34,6 +35,25 @@ const HomePageWeb = () => {
           <h1 className={classes.firstChild}>Shojol</h1>
           <h1 className={classes.lastChild}>Shake</h1>
           <h6>I_create_websites_and_applications</h6>
+          {/* `<div class="container">
+            <div class="content">
+              <p>Hover me !</p>
+              <svg id="more-arrows">
+                <polygon
+                  class="arrow-top"
+                  points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
+                />
+                <polygon
+                  class="arrow-middle"
+                  points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
+                />
+                <polygon
+                  class="arrow-bottom"
+                  points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
+                />
+              </svg>
+            </div>
+          </div>` */}
         </div>
       </div>
       <AboutMe />

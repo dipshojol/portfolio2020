@@ -4,8 +4,12 @@ const useStyles = makeStyles(theme => ({
   landingWrapper: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    fontFamily: "'Zilla Slab Highlight', cursive",
-    visibility: 'hidden'
+    // fontFamily: "'Zilla Slab Highlight', cursive",
+    fontFamily: "'Marcellus SC', serif",
+    visibility: 'hidden',
+    color: '#8b8b8b',
+    minHeight: '100vh',
+    marginTop: '-60px'
   },
   leftSection: {
     display: 'grid',
@@ -27,20 +31,20 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '10px',
     '& h5': {
       fontSize: '3rem',
-      margin: 0,
-      color: '#565656'
+      margin: 0
+      // color: '#565656'
     },
     '& h1': {
-      color: '#8b8b8b',
       fontSize: '7rem',
       // marginTop: 0,
       marginBottom: 0,
-      fontFamily: "'Zilla Slab Highlight', cursive"
+      // fontFamily: "'Zilla Slab Highlight', cursive"
+      fontFamily: "'Marcellus SC', serif"
     },
     '& h6': {
       fontSize: '2rem',
-      margin: 0,
-      color: '#202020'
+      margin: 0
+      // color: '#202020'
     }
   },
   lastChild: {
