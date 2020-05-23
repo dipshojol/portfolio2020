@@ -1,32 +1,87 @@
 import React, { useRef, useEffect } from 'react';
+import useStyles from './HomeStyle';
+import { TweenMax, Power3 } from 'gsap';
+import { Controller, Scene } from 'react-scrollmagic';
+import { Back } from 'gsap/EasePack';
+import { Tween, Timeline } from 'react-gsap';
+
 import myPhoto from '../images/photoBW.png';
-import useStyles from './AboutMeStyle';
 import photography from '../images/jack-finnigan-3uOP_akvtOY-unsplash.jpg';
 import photography2 from '../images/top-view-photo-of-keyboard-near-earphones-1420701.jpg';
-// import photography2 from '../images/photography2.jpg';
-import { TweenMax, Power3 } from 'gsap';
 
-const AboutMe = () => {
+const HomePageWeb = () => {
   const landingWrap = useRef(null);
   const landingPhoto = useRef(null);
   const h5 = useRef(null);
+  const h1 = useRef(null);
+  const h12 = useRef(null);
+  const h6 = useRef(null);
+
   const classes = useStyles();
 
   useEffect(() => {
-    // console.log(landingPhoto.current);
-    // TweenMax.to(landingWrap.current, 0, {
-    //   visibility: 'visible'
-    // });
+    TweenMax.to(landingWrap.current, 0, {
+      visibility: 'visible'
+    });
     // TweenMax.from(landingPhoto.current, 1, {
     //   opacity: 0,
     //   x: -50,
     //   ease: Power3.easeOut
     // });
-    // TweenMax.from(h5.current, 1, { opacity: 0, x: +50, ease: Power3.easeOut });
+    TweenMax.staggerFrom(
+      [landingPhoto.current, h5.current, h1.current, h12.current, h6.current],
+      1,
+      {
+        opacity: 0,
+        y: -50,
+        ease: Power3.easeOut
+      },
+      0.6
+    );
   }, []);
 
   return (
     <>
+      <div ref={landingWrap} className={classes.landingWrapper}>
+        <div className={classes.leftSection}>
+          <img ref={landingPhoto} src={myPhoto} alt="shojol" />
+        </div>
+        <div className={classes.rightSection}>
+          <h5 ref={h5}>Hello,_I'm</h5>
+          <h1 ref={h1} className={classes.firstChild}>
+            Shojol
+          </h1>
+          <h1 ref={h12} className={classes.lastChild}>
+            Shake
+          </h1>
+          <h6 ref={h6}>I_create_websites_and_applications</h6>
+        </div>
+      </div>
+      <Controller>
+        <Scene duration={300} offset={300} pin>
+          <Tween
+            wrapper={<ul className="devs" />}
+            staggerFrom={{
+              opacity: 0,
+              cycle: {
+                rotationX: [-90, 90],
+                transformOrigin: ['50% top -100', '50% bottom 100']
+              }
+            }}
+            stagger={0.1}
+          >
+            <li>Rich Harris</li>
+            <li>Dan Abramov</li>
+            <li>Kyle Simpson</li>
+            <li>Gregory Brown</li>
+            <li>Addy Osmani</li>
+            <li>Evan You</li>
+            <li>Axel Rauschmayer</li>
+            <li>Sarah Drasner</li>
+            <li>André Staltz</li>
+          </Tween>
+        </Scene>
+      </Controller>
       <div className={classes.aboutSection}>
         <div className={classes.aboutMe1}>
           <div>
@@ -55,10 +110,8 @@ const AboutMe = () => {
           <span> Material UI</span>, Bootstrap,
           <span> Restful API</span>, Responsive web design, cross browser
           compatible and more), digital accessibility, <br />
-          {/* <br /> */}
           <h2>Design</h2> – (<span>Sketch, Adobe XD</span>, Adobe Photoshop,
           Adobe Illustrator) <br />
-          {/* <br /> */}
           <h2>Backend</h2> programming and <h2>Database</h2> – (
           <span>NodeJS</span>, JIVE, and <span>MongoDB</span>, PostgreSQL,
           Firebase and more). <br />
@@ -73,4 +126,4 @@ const AboutMe = () => {
     </>
   );
 };
-export default AboutMe;
+export default HomePageWeb;

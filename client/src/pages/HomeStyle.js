@@ -1,39 +1,75 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
+  landingWrapper: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    visibility: 'hidden',
+    color: '#8b8b8b',
+    minHeight: '100vh',
+    marginTop: '-60px'
+  },
+  leftSection: {
+    display: 'grid',
+    placeContent: 'end',
+    '& img': {
+      maxHeight: '45rem',
+      display: 'grid',
+      justifySelf: 'end',
+      marginTop: '7.5rem',
+      webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+      filter: 'grayscale(100%)'
+    }
+  },
+  rightSection: {
+    display: 'grid',
+    alignContent: 'end',
+    marginTop: '7.5rem',
+    maxWidth: '75%',
+    paddingLeft: '10px',
+    color: '#565656',
+
+    '& h5': {
+      fontSize: '5rem',
+      margin: 0
+    },
+    '& h1': {
+      fontSize: '7rem',
+      // marginTop: 0,
+      marginBottom: 0
+      // fontFamily: "'Zilla Slab Highlight', cursive"
+      // fontFamily: "'Marcellus SC', serif"
+    },
+    '& h6': {
+      fontSize: '2rem',
+      margin: 0
+      // color: '#202020'
+    }
+  },
+  lastChild: {
+    marginTop: '-1.6rem'
+  },
+  firstChild: {
+    marginTop: '0'
+  },
+  // about section
   aboutSection: {
-    // display: 'grid',
-    // gridTemplateColumns: '3fr 1fr',
-    // placeItems: 'flex-start',
     minHeight: '100vh',
     marginTop: 50,
     position: 'relative',
     display: 'grid',
-    alignItems: 'center'
-    // justifyItems: 'center'
+    alignItems: 'center',
+    color: '#101010'
   },
   aboutMe1: {
-    // position: 'absolute',
-    // top: '50%',
-    marginTop: '-1rem',
-    maxWidth: '50%',
+    maxWidth: '60%',
     fontSize: '4rem',
     padding: '3rem',
-    fontFamily: "'Marcellus SC', serif",
     zIndex: '1',
-    color: '#8b8b8b',
     transition: 'all .4s ease',
-    // textAlign: 'center',
-
-    '&:hover': {
-      // border: '5px solid #8b8b8b',
-      // padding: '3.5rem',
-      transition: 'all .4s ease'
-    },
 
     '& h1': {
       display: 'inline'
-      // color: '#8b8b8b'
     }
   },
   bgImg1: {
@@ -43,13 +79,11 @@ const useStyles = makeStyles(theme => ({
     display: 'grid',
     justifyItems: 'end',
     overflow: 'hidden',
-    // border: '1px solid',
     height: '100%',
 
     '& img': {
       maxHeight: '100%',
       maxWidth: '50vw',
-      // width: '10%',
       alignSelf: 'center',
       webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
       filter: 'grayscale(100%)',
@@ -59,31 +93,29 @@ const useStyles = makeStyles(theme => ({
     },
     '&:hover': {
       '& img': {
-        webkitFilter: 'grayscale(35%)' /* Safari 6.0 - 9.0 */,
-        filter: 'grayscale(35%)',
+        // webkitFilter: 'grayscale(35%)' /* Safari 6.0 - 9.0 */,
+        // filter: 'grayscale(35%)',
         transform: 'scale(1.05)',
         transition: 'all .4s ease'
       }
     }
   },
   aboutSection2: {
-    // display: 'grid',
-    // gridTemplateColumns: '3fr 1fr',
-    // placeItems: 'flex-start',
     minHeight: '100vh',
     marginTop: 50,
     position: 'relative',
     display: 'grid',
     alignItems: 'center',
-    justifyItems: 'center'
+    justifyItems: 'center',
+    color: '#565656'
   },
   aboutMe2: {
     maxWidth: '60%',
     fontSize: '2rem',
-    fontFamily: "'Marcellus SC', serif",
+    // fontFamily: "'Marcellus SC', serif",
     zIndex: '1',
-    color: '#8b8b8b',
-    marginTop: '22rem',
+    // color: '#8b8b8b',
+    marginTop: '15rem',
     marginBottom: '5%',
 
     '& h2': {

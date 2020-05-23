@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Home';
 import CssBaseline from '@material-ui/core/CssBaseline';
 const Route = require('react-router-dom').Route;
 
@@ -17,7 +17,7 @@ function App() {
           <Navbar />
           <Switch>
             <Route path="/" exact strict component={HomePage} />
-            <Route path="/about" exact strict component={User} />
+            <Route path="/about" exact strict component={HomePage} />
             <Route path="/portfolio" exact strict component={User} />
             <Route path="/skills" exact strict component={User} />
             <Route path="/education" exact strict component={User} />

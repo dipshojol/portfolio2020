@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/dipshojol/portfolio2020/issues"
   },
-  "homepage": "https://github.com/dipshojol/portfolio2020#readme"
+  "homepage": "https://github.com/dipshojol/portfolio2020#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "react-gsap": "^2.2.1",
+    "react-scrollmagic": "^2.2.0"
+  }
 }

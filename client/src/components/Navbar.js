@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MobileMenu from './MobileMenu';
 import { useWindowSize } from '../utils/windowSize';
 import { NavLink } from 'react-router-dom';
 import myLogo from '../images/myLogo.png';
+import { TweenMax, Power3 } from 'gsap';
 
 const useStyles = makeStyles(theme => ({
   nav: {
@@ -87,13 +88,31 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Navbar = () => {
+const NavbarWeb = () => {
+  const mainNav = useRef(null);
   const classes = useStyles();
-  let [width] = useWindowSize();
 
-  return width > 630 ? (
+  useEffect(() => {
+    console.log(mainNav.current);
+    TweenMax.fromTo(
+      mainNav.current,
+      1,
+      {
+        opacity: 0,
+        y: -60,
+        ease: Power3.easeOut
+      },
+      {
+        opacity: 1,
+        delay: 3.5,
+        y: 0,
+        ease: Power3.easeOut
+      }
+    );
+  }, []);
+  return (
     <>
-      <nav className={classes.nav}>
+      <nav ref={mainNav} className={classes.nav}>
         <div className={classes.logoWrapper}>
           <NavLink to="/">
             <img src={myLogo} alt="myLogo" />
@@ -128,8 +147,12 @@ const Navbar = () => {
         </ul>
       </nav>
     </>
-  ) : (
-    <MobileMenu />
   );
+};
+
+const Navbar = () => {
+  let [width] = useWindowSize();
+
+  return width > 630 ? <NavbarWeb /> : <MobileMenu />;
 };
 export default Navbar;
