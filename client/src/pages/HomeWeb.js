@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import useStyles from './HomeStyle';
 import { TweenMax, Power3 } from 'gsap';
-import { Controller, Scene } from 'react-scrollmagic';
-import { Back } from 'gsap/EasePack';
-import { Tween, Timeline } from 'react-gsap';
+// import { Controller, Scene } from 'react-scrollmagic';
+// import { Back } from 'gsap/EasePack';
+// import { Tween, Timeline } from 'react-gsap';
 
 import myPhoto from '../images/photoBW.png';
 import photography from '../images/jack-finnigan-3uOP_akvtOY-unsplash.jpg';
@@ -42,6 +42,13 @@ const HomePageWeb = () => {
 
   return (
     <>
+      {/* <Controller>
+        <Scene duration={1000} offset={-50} triggerElement="#aboutMe">
+          <Tween
+            staggerFrom={{ y: 50, visibility: 'hidden', opacity: 0 }}
+            staggerTo={{ y: 0, visibility: 'visible', opacity: 1 }}
+            stagger={1}
+          > */}
       <div ref={landingWrap} className={classes.landingWrapper}>
         <div className={classes.leftSection}>
           <img ref={landingPhoto} src={myPhoto} alt="shojol" />
@@ -57,31 +64,6 @@ const HomePageWeb = () => {
           <h6 ref={h6}>I_create_websites_and_applications</h6>
         </div>
       </div>
-      <Controller>
-        <Scene duration={300} offset={300} pin>
-          <Tween
-            wrapper={<ul className="devs" />}
-            staggerFrom={{
-              opacity: 0,
-              cycle: {
-                rotationX: [-90, 90],
-                transformOrigin: ['50% top -100', '50% bottom 100']
-              }
-            }}
-            stagger={0.1}
-          >
-            <li>Rich Harris</li>
-            <li>Dan Abramov</li>
-            <li>Kyle Simpson</li>
-            <li>Gregory Brown</li>
-            <li>Addy Osmani</li>
-            <li>Evan You</li>
-            <li>Axel Rauschmayer</li>
-            <li>Sarah Drasner</li>
-            <li>André Staltz</li>
-          </Tween>
-        </Scene>
-      </Controller>
       <div className={classes.aboutSection}>
         <div className={classes.aboutMe1}>
           <div>
@@ -100,7 +82,7 @@ const HomePageWeb = () => {
           <img src={photography} alt="traveling" />
         </div>
       </div>
-      <div className={classes.aboutSection2}>
+      <div id="aboutMe" className={classes.aboutSection2}>
         <div className={classes.bgImg2}>
           <img src={photography2} alt="traveling" />
         </div>
@@ -117,12 +99,15 @@ const HomePageWeb = () => {
           Firebase and more). <br />
           <br />
           In the past few years, I have been working for some great companies
-          like <span>dropisle</span> inc., <span>OCT</span>(oct.ca),{' '}
-          <span>Apple</span> inc. and <span>TriaBeauty</span> inc. which
-          something pushes me more into
+          like <span>dropisle</span> inc., <span>OCT</span>
+          (oct.ca), <span>Apple</span> inc. and <span>TriaBeauty</span> inc.
+          which something pushes me more into
           <span> making something different</span>.
         </div>
       </div>
+      {/* </Tween>
+        </Scene>
+      </Controller> */}
     </>
   );
 };

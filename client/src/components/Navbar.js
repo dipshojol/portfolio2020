@@ -8,9 +8,9 @@ import { TweenMax, Power3 } from 'gsap';
 
 const useStyles = makeStyles(theme => ({
   nav: {
-    fontFamily: "'Teko', sans-serif",
+    fontFamily: 'var(--header-footer-font)',
     fontSize: '1.1rem',
-    background: '#565656',
+    background: 'var(--header-footer-bg-color)',
     height: '60px',
     overflow: 'hidden',
     display: 'grid',
@@ -104,7 +104,7 @@ const NavbarWeb = () => {
       },
       {
         opacity: 1,
-        delay: 3.5,
+        // delay: 3.5,
         y: 0,
         ease: Power3.easeOut
       }
