@@ -110,13 +110,13 @@ const useStyles = makeStyles(theme => ({
     color: '#565656'
   },
   aboutMe2: {
-    maxWidth: '60%',
-    fontSize: '2rem',
-    // fontFamily: "'Marcellus SC', serif",
+    maxWidth: '50%',
+    fontSize: '1.5rem',
     zIndex: '1',
-    // color: '#8b8b8b',
-    marginTop: '15rem',
+    marginTop: '10rem',
     marginBottom: '5%',
+    padding: '6rem',
+    zIndex: '1',
 
     '& h2': {
       display: 'inline'
@@ -125,19 +125,17 @@ const useStyles = makeStyles(theme => ({
   },
   bgImg2: {
     position: 'absolute',
-    left: '0',
+    right: '0',
     top: '0',
     display: 'grid',
     justifyItems: 'end',
     overflow: 'hidden',
-    // border: '1px solid',
     height: '100%',
+    zIndex: '-1',
 
     '& img': {
       maxHeight: '80%',
-      // maxWidth: '25vw',
-      // width: '10%',
-      alignSelf: 'center',
+      maxWidth: '100%',
       webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
       filter: 'grayscale(100%)',
       transition: 'all .4s ease'

@@ -67,15 +67,11 @@ const HomePageWeb = () => {
       <div className={classes.aboutSection}>
         <div className={classes.aboutMe1}>
           <div>
-            I'm a <h1>Web Developer</h1>
-            <br /> and Designer living in
-            <span> Toronto</span>.
-            {/* <br />I love to develop unique and robust web application and my
-          interest in web technology increasing since the day I started working
-          using web technologies. <br /> */}
-            <br />I spend my daily life, Design and Developing new
-            websites/applications using the most advanced web technologies such
-            as, <br />
+            I'm a <h1>Frontend/MERN Developer</h1>
+            <br /> living in Toronto.
+            <br />I love to develop unique and robust web application and my
+            interest in web technology increasing since the day I started
+            working using web technologies. <br />
           </div>
         </div>
         <div className={classes.bgImg1}>
@@ -87,6 +83,9 @@ const HomePageWeb = () => {
           <img src={photography2} alt="traveling" />
         </div>
         <div className={classes.aboutMe2}>
+          <br />I spend my daily life, Design and Developing new
+          websites/applications using the most advanced web technologies such
+          as, <br />
           <h2>Frontend</h2> engineering – ( vanilla
           <span> JavaScript (ES6), ReactJS</span>, jQuery, CSS/Scss,
           <span> Material UI</span>, Bootstrap,
@@ -98,10 +97,10 @@ const HomePageWeb = () => {
           <span>NodeJS</span>, JIVE, and <span>MongoDB</span>, PostgreSQL,
           Firebase and more). <br />
           <br />
-          In the past few years, I have been working for some great companies
-          like <span>dropisle</span> inc., <span>OCT</span>
-          (oct.ca), <span>Apple</span> inc. and <span>TriaBeauty</span> inc.
-          which something pushes me more into
+          Currently i am working for <span>dropisle</span> inc. as an frontend
+          developer. In the past few years, I worked for some great companies
+          like <span>OCT</span> (oct.ca), <span>Apple</span> inc. and
+          <span>TriaBeauty</span> inc. which something pushes me more into
           <span> making something different</span>.
         </div>
       </div>
