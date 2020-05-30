@@ -16,7 +16,9 @@ const useStyles = makeStyles(theme => ({
       left: '0',
       top: '0',
       zIndex: '-1',
-      height: '100%'
+      height: '100%',
+      webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+      filter: 'grayscale(100%)'
     }
   },
 
@@ -35,7 +37,8 @@ const useStyles = makeStyles(theme => ({
       opacity: '.6'
     },
     '& h5': {
-      fontSize: '1.4rem'
+      fontSize: '1.4rem',
+      opacity: '.9'
     },
     '& a': {
       color: '#fff'
@@ -48,11 +51,11 @@ const useStyles = makeStyles(theme => ({
   },
   infoOne: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr'
+    gridTemplateColumns: '1.2fr 1fr'
   },
   infoTwo: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr'
+    gridTemplateColumns: '1.2fr 1fr'
   },
   initial: {
     fontSize: '5rem',
@@ -63,7 +66,10 @@ const useStyles = makeStyles(theme => ({
   },
   photoCredits: {
     display: 'grid',
-    alignContent: 'end'
+    alignContent: 'end',
+    '& h6': {
+      fontSize: '.4rem'
+    }
   }
 }));
 
@@ -111,7 +117,7 @@ const Footer = () => {
             <h1>SS</h1>
             <div className={classes.social}>
               <h6>Follow Me</h6>
-              <h5>Lw In Git</h5>
+              <h5>Lk In Git</h5>
             </div>
           </div>
         </div>

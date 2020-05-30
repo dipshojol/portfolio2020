@@ -4,14 +4,17 @@ const useStyles = makeStyles(theme => ({
   landingWrapper: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    // visibility: 'hidden',
     color: '#8b8b8b',
-    Height: '100vh'
-    // marginTop: '-60px'
+    minHeight: '550px',
+    height: '100vh',
+    // maxHeight: '1080px',
+    marginTop: '-60px'
   },
   leftSection: {
     display: 'grid',
-    placeContent: 'end',
+    justifyContent: 'end',
+    alignContent: 'center',
+
     '& img': {
       maxHeight: '45rem',
       display: 'grid',
@@ -23,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   rightSection: {
     display: 'grid',
-    alignContent: 'end',
+    alignContent: 'center',
     marginTop: '7.5rem',
     maxWidth: '75%',
     paddingLeft: '10px',
