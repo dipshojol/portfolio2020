@@ -93,7 +93,7 @@ const NavbarWeb = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    console.log(mainNav.current);
+    // console.log(mainNav.current);
     TweenMax.fromTo(
       mainNav.current,
       1,

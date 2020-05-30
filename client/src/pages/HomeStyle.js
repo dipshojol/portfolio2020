@@ -4,10 +4,10 @@ const useStyles = makeStyles(theme => ({
   landingWrapper: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    visibility: 'hidden',
+    // visibility: 'hidden',
     color: '#8b8b8b',
-    minHeight: '100vh',
-    marginTop: '-60px'
+    Height: '100vh'
+    // marginTop: '-60px'
   },
   leftSection: {
     display: 'grid',
@@ -62,14 +62,17 @@ const useStyles = makeStyles(theme => ({
     color: '#101010'
   },
   aboutMe1: {
-    maxWidth: '60%',
+    maxWidth: '50%',
     fontSize: '4rem',
     padding: '3rem',
     zIndex: '1',
     transition: 'all .4s ease',
+    // visibility: 'hidden',
+    opacity: 1,
 
     '& h1': {
-      display: 'inline'
+      display: 'inline',
+      fontSize: '5rem'
     }
   },
   bgImg1: {
@@ -80,6 +83,8 @@ const useStyles = makeStyles(theme => ({
     justifyItems: 'end',
     overflow: 'hidden',
     height: '100%',
+    // visibility: 'hidden',
+    opacity: '1',
 
     '& img': {
       maxHeight: '100%',
@@ -129,6 +134,7 @@ const useStyles = makeStyles(theme => ({
     top: '0',
     display: 'grid',
     justifyItems: 'end',
+    alignItems: 'center',
     overflow: 'hidden',
     height: '100%',
     zIndex: '-1',
