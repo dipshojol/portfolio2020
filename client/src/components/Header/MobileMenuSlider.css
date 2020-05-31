@@ -1,4 +1,4 @@
-body #root input.toggle {
+/* body #root input.toggle {
   position: fixed;
   top: 0;
   right: 0;
@@ -26,7 +26,7 @@ body #root div.hamburger {
   right: 0;
   width: 60px;
   height: 50px;
-  padding: 1rem;
+  padding: 15px;
   display: grid;
   place-items: center;
 }
@@ -52,7 +52,7 @@ body #root div.hamburger > div:after {
 }
 body #root div.hamburger > div:after {
   top: 8px;
-}
+} */
 body #root .toggle:checked ~ main nav .nav-wrap .nav-element-wrap {
   height: 100%;
 }

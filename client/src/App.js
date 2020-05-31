@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components/Header/Navbar';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/Home';
 import Education from './pages/Education';
@@ -20,8 +20,8 @@ function App() {
           <Switch>
             <Route path="/" exact strict component={HomePage} />
             <Route path="/about" exact strict component={HomePage} />
-            <Route path="/portfolio" exact strict component={User} />
-            <Route path="/skills" exact strict component={User} />
+            <Route path="/portfolio" exact strict component={HomePage} />
+            <Route path="/skills" exact strict component={HomePage} />
             <Route path="/education" exact strict component={Education} />
             <Route path="/contact" exact strict component={User} />
           </Switch>

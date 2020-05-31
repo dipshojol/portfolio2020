@@ -5,6 +5,7 @@ export function useWindowSize() {
   useLayoutEffect(() => {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
+      // console.log(window.innerWidth);
     }
     window.addEventListener('resize', updateSize);
     updateSize();

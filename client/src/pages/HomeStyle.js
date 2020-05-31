@@ -5,18 +5,23 @@ const useStyles = makeStyles(theme => ({
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     color: '#8b8b8b',
-    minHeight: '550px',
+    // minHeight: '714px',
     height: '100vh',
     // maxHeight: '1080px',
-    marginTop: '-60px'
+    // marginTop: '-60px',
+    width: '100%',
+    overflow: 'hidden'
   },
   leftSection: {
     display: 'grid',
     justifyContent: 'end',
     alignContent: 'center',
+    // width: '90%',
+    overflow: 'hidden',
 
     '& img': {
-      maxHeight: '45rem',
+      // maxHeight: '45rem',
+      maxHeight: '80%',
       display: 'grid',
       justifySelf: 'end',
       marginTop: '7.5rem',
@@ -27,10 +32,18 @@ const useStyles = makeStyles(theme => ({
   rightSection: {
     display: 'grid',
     alignContent: 'center',
-    marginTop: '7.5rem',
-    maxWidth: '75%',
     paddingLeft: '10px',
     color: '#565656',
+    gridTemplateRows: '9fr .5fr',
+    maxHeight: '95vh',
+    width: '100%',
+    width: '100%',
+    overflow: 'hidden',
+
+    '& div': {
+      display: 'grid',
+      alignContent: 'center'
+    },
 
     '& h5': {
       fontSize: '5rem',
@@ -38,15 +51,11 @@ const useStyles = makeStyles(theme => ({
     },
     '& h1': {
       fontSize: '7rem',
-      // marginTop: 0,
       marginBottom: 0
-      // fontFamily: "'Zilla Slab Highlight', cursive"
-      // fontFamily: "'Marcellus SC', serif"
     },
     '& h6': {
       fontSize: '2rem',
       margin: 0
-      // color: '#202020'
     }
   },
   lastChild: {
@@ -55,17 +64,27 @@ const useStyles = makeStyles(theme => ({
   firstChild: {
     marginTop: '0'
   },
-  // about section
+  greetings: {
+    marginTop: 60
+  },
+  scrollDown: {
+    margin: '0 auto'
+  },
+  scrollDownImg: {
+    height: 50
+  },
+  // about section 1
   aboutSection: {
     minHeight: '100vh',
     marginTop: 50,
-    position: 'relative',
     display: 'grid',
     alignItems: 'center',
-    color: '#101010'
+    color: '#101010',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr'
   },
   aboutMe1: {
-    maxWidth: '50%',
+    // maxWidth: '50%',
     fontSize: '4rem',
     padding: '3rem',
     zIndex: '1',
@@ -78,16 +97,11 @@ const useStyles = makeStyles(theme => ({
       fontSize: '5rem'
     }
   },
-  bgImg1: {
-    position: 'absolute',
-    right: '0',
-    top: '0',
+  bgImg: {
     display: 'grid',
     justifyItems: 'end',
     overflow: 'hidden',
     height: '100%',
-    // visibility: 'hidden',
-    opacity: '1',
 
     '& img': {
       maxHeight: '100%',
@@ -97,31 +111,27 @@ const useStyles = makeStyles(theme => ({
       filter: 'grayscale(100%)',
       transition: 'all .4s ease',
       display: 'grid',
-      justifySelf: 'end'
-    },
-    '&:hover': {
-      '& img': {
-        // webkitFilter: 'grayscale(35%)' /* Safari 6.0 - 9.0 */,
-        // filter: 'grayscale(35%)',
+      justifySelf: 'end',
+      '&:hover': {
         transform: 'scale(1.05)',
         transition: 'all .4s ease'
       }
     }
   },
-  aboutSection2: {
-    minHeight: '100vh',
-    marginTop: 50,
-    position: 'relative',
-    display: 'grid',
-    alignItems: 'center',
-    justifyItems: 'center',
-    color: '#565656'
-  },
+  // aboutSection2: {
+  //   minHeight: '100vh',
+  //   marginTop: 50,
+  //   position: 'relative',
+  //   display: 'grid',
+  //   alignItems: 'center',
+  //   justifyItems: 'center',
+  //   color: '#565656'
+  // },
   aboutMe2: {
-    maxWidth: '50%',
+    // maxWidth: '50%',
     fontSize: '1.5rem',
     zIndex: '1',
-    marginTop: '10rem',
+    // marginTop: '10rem',
     marginBottom: '5%',
     padding: '6rem',
     zIndex: '1',
@@ -130,34 +140,30 @@ const useStyles = makeStyles(theme => ({
       display: 'inline'
       // color: '#8b8b8b'
     }
-  },
-  bgImg2: {
-    position: 'absolute',
-    right: '0',
-    top: '0',
-    display: 'grid',
-    justifyItems: 'end',
-    alignItems: 'center',
-    overflow: 'hidden',
-    height: '100%',
-    zIndex: '-1',
-
-    '& img': {
-      maxHeight: '80%',
-      maxWidth: '100%',
-      webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-      filter: 'grayscale(100%)',
-      transition: 'all .4s ease'
-    },
-    '&:hover': {
-      '& img': {
-        webkitFilter: 'grayscale(35%)' /* Safari 6.0 - 9.0 */,
-        filter: 'grayscale(35%)',
-        transform: 'scale(1.05)',
-        transition: 'all .4s ease'
-      }
-    }
   }
+
+  // bgImg2: {
+  //   display: 'grid',
+  //   justifyItems: 'end',
+  //   alignItems: 'center',
+  //   overflow: 'hidden',
+  //   height: '100%',
+  //   zIndex: '-1',
+
+  //   '& img': {
+  //     maxHeight: '80%',
+  //     maxWidth: '100%',
+  //     webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+  //     filter: 'grayscale(100%)',
+  //     transition: 'all .4s ease',
+  //     '&:hover': {
+  //       // webkitFilter: 'grayscale(35%)' /* Safari 6.0 - 9.0 */,
+  //       // filter: 'grayscale(35%)',
+  //       transform: 'scale(1.05)',
+  //       transition: 'all .4s ease'
+  //     }
+  //   }
+  // }
 }));
 
 export default useStyles;

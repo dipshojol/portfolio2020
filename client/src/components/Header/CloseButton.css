@@ -1,0 +1,68 @@
+body #root input.toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  z-index: 11;
+}
+body #root .toggle:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+body #root .toggle:checked + .hamburger > div:before,
+body #root .toggle:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+body #root .toggle:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+body #root div.hamburger {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 50px;
+  padding: 15px;
+  display: grid;
+  place-items: center;
+}
+body #root div.hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  transition: all 0.4s ease;
+  border-radius: 5px;
+}
+body #root div.hamburger > div:before,
+body #root div.hamburger > div:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 100%;
+  height: 3px;
+  background: inherit;
+  border-radius: 5px;
+}
+body #root div.hamburger > div:after {
+  top: 8px;
+}
+/* body #root .toggle:checked ~ main nav .nav-wrap .nav-element-wrap {
+  height: 100%;
+}
+body #root .toggle:checked ~ main nav .nav-wrap .nav-element-wrap a {
+  opacity: 1;
+  margin-top: 0;
+  transition: all 1s ease;
+}
+body #root .toggle:checked ~ main .main-container {
+  left: 5%;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+} */

@@ -1,20 +1,27 @@
 import React, { useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import MobileMenu from './MobileMenu';
-import { useWindowSize } from '../utils/windowSize';
+
+import MobileMenuSlider from './MobileMenuSlider';
+import CloseButton from './CloseButton';
+
+import { useWindowSize } from '../../utils/windowSize';
 import { NavLink } from 'react-router-dom';
-import myLogo from '../images/myLogo.png';
-import { TweenMax, Power3 } from 'gsap';
+import myLogo from '../../images/myLogo.png';
 
 const useStyles = makeStyles(theme => ({
   nav: {
     fontFamily: 'var(--header-footer-font)',
     fontSize: '1.1rem',
-    background: 'var(--header-footer-bg-color)',
+    background: '#000',
     height: '60px',
     overflow: 'hidden',
     display: 'grid',
-    gridTemplateColumns: '100px auto'
+    gridTemplateColumns: '100px auto',
+    zIndex: '100',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%'
   },
   logoWrapper: {
     display: 'grid',
@@ -85,34 +92,35 @@ const useStyles = makeStyles(theme => ({
         color: '#565656'
       }
     }
+  },
+  navMobile: {
+    background: '#000',
+    height: '50px',
+    overflow: 'hidden',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    position: 'fixed',
+    width: '100%',
+    zIndex: 1
+  },
+  logoWrapper: {
+    display: 'grid',
+    justifyContent: 'left',
+    alignContent: 'center',
+    height: 'inherit',
+    '& img': {
+      maxWidth: 50,
+      marginLeft: 10
+    }
   }
 }));
 
 const NavbarWeb = () => {
-  const mainNav = useRef(null);
   const classes = useStyles();
 
-  useEffect(() => {
-    // console.log(mainNav.current);
-    TweenMax.fromTo(
-      mainNav.current,
-      1,
-      {
-        opacity: 0,
-        y: -60,
-        ease: Power3.easeOut
-      },
-      {
-        opacity: 1,
-        // delay: 3.5,
-        y: 0,
-        ease: Power3.easeOut
-      }
-    );
-  }, []);
   return (
     <>
-      <nav ref={mainNav} className={classes.nav}>
+      <nav className={classes.nav}>
         <div className={classes.logoWrapper}>
           <NavLink to="/">
             <img src={myLogo} alt="myLogo" />
@@ -146,6 +154,21 @@ const NavbarWeb = () => {
           </NavLink>
         </ul>
       </nav>
+    </>
+  );
+};
+
+const MobileMenu = () => {
+  const classes = useStyles();
+  return (
+    <>
+      <div className={classes.navMobile}>
+        <div className={classes.logoWrapper}>
+          <img src={myLogo} alt="myLogo" />
+        </div>
+        <CloseButton />
+        <MobileMenuSlider />
+      </div>
     </>
   );
 };
