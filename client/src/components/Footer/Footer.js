@@ -7,6 +7,7 @@ import FooterMobile from './FooterMobile';
 const useStyles = makeStyles(theme => ({
   footer: {
     height: '100vh',
+    minHeight: '600px',
     width: '100vw',
     display: 'grid',
     color: '#fff',
@@ -31,8 +32,9 @@ const useStyles = makeStyles(theme => ({
     display: 'grid',
     gridTemplateColumns: '2fr 1fr',
     width: '80%',
-    height: '100%',
+    height: '80%',
     justifySelf: 'end',
+    alignSelf: 'end',
     paddingLeft: '4rem',
     paddingTop: '6rem',
     '& h6': {
@@ -61,10 +63,21 @@ const useStyles = makeStyles(theme => ({
     gridTemplateColumns: '1.2fr 1fr'
   },
   initial: {
-    fontSize: '5rem',
     '& h1': {
+      fontSize: '5rem',
       margin: '0',
       padding: '0'
+    },
+    '& a': {
+      fontSize: '1.4rem',
+      paddingRight: '20px',
+      cursor: 'pointer',
+      transition: 'all .4s ease',
+
+      '&:hover': {
+        letterSpacing: '10px',
+        transition: 'all .4s ease'
+      }
     }
   },
   photoCredits: {
@@ -121,7 +134,11 @@ const Footer = () => {
             <h1>SS</h1>
             <div className={classes.social}>
               <h6>Follow Me</h6>
-              <h5>Lk In Git</h5>
+              <div>
+                <a href="">Lk</a>
+                <a href="">In</a>
+                <a href="">Git</a>
+              </div>
             </div>
           </div>
         </div>
