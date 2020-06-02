@@ -30,6 +30,41 @@
         --header-footer-font: 'Teko', sans-serif;
         --body-font: 'Federo', sans-serif;
       }
+      .App {
+        width: 100%;
+        overflow: hidden;
+      }
+      /* width */
+      .main::-webkit-scrollbar {
+        width: 10px;
+        margin-right: 10px;
+        position: absolute;
+        height: 500px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: linear-gradient(left, #fff, #e4e4e4);
+        border: 1px solid #aaa;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #fff;
+      }
+
+      ::-webkit-scrollbar-thumb:active {
+        background: linear-gradient(left, #22add4, #1e98ba);
+      }
+
       a {
         text-decoration: none;
       }

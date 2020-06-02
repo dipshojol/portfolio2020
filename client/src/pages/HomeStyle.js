@@ -5,10 +5,7 @@ const useStyles = makeStyles(theme => ({
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     color: '#8b8b8b',
-    // minHeight: '714px',
     height: '100vh',
-    // maxHeight: '1080px',
-    // marginTop: '-60px',
     width: '100%',
     overflow: 'hidden'
   },

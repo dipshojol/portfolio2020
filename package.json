@@ -19,6 +19,7 @@
   "homepage": "https://github.com/dipshojol/portfolio2020#readme",
   "dependencies": {
     "aos": "^2.3.4",
+    "materialize-css": "^1.0.0-rc.2",
     "react-gsap": "^2.2.1",
     "react-intersection-observer": "^8.26.2",
     "react-intersection-observer-hook": "^1.0.4",
