@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import HomePage from './pages/Home';
 import Education from './pages/Education';
 import Portfolio from './pages/Portfolio';
+import Skills from './pages/Skills';
 import CssBaseline from '@material-ui/core/CssBaseline';
 const Route = require('react-router-dom').Route;
 
@@ -22,7 +23,7 @@ function App() {
             <Route path="/" exact strict component={HomePage} />
             <Route path="/about" exact strict component={HomePage} />
             <Route path="/portfolio" exact strict component={Portfolio} />
-            <Route path="/skills" exact strict component={HomePage} />
+            <Route path="/skills" exact strict component={Skills} />
             <Route path="/education" exact strict component={Education} />
             <Route path="/contact" exact strict component={User} />
           </Switch>
