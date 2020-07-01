@@ -18,7 +18,7 @@ function App() {
       <Router>
         <CssBaseline />
         <div className="App">
-          <Navbar />
+          {/* <Navbar /> */}
           <Switch>
             <Route path="/" exact strict component={HomePage} />
             <Route path="/about" exact strict component={HomePage} />

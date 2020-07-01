@@ -1,13 +1,31 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
+  viewPortHW: {
+    width: '100%',
+    display: 'grid',
+    placeItems: 'center'
+  },
+  maxHW: {
+    maxWidth: '1800px',
+    maxHeight: '1200px',
+    height: '100vh',
+    minHeight: '400px',
+    // border: '1px solid blue',
+    overflow: 'hidden',
+    display: 'grid',
+    position: 'relative'
+  },
   landingWrapper: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     color: '#8b8b8b',
+    minHeight: '650px',
     height: '100vh',
     width: '100%',
     overflow: 'hidden'
+    // border: '1px solid red'
+    // marginTop: '100px'
   },
   leftSection: {
     display: 'grid',
@@ -18,10 +36,10 @@ const useStyles = makeStyles(theme => ({
 
     '& img': {
       // maxHeight: '45rem',
-      maxHeight: '80%',
-      display: 'grid',
-      justifySelf: 'end',
-      marginTop: '7.5rem',
+      height: '100%',
+      // display: 'grid',
+      // justifySelf: 'end',
+      // marginTop: '7.5rem',
       webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
       filter: 'grayscale(100%)'
     }
@@ -72,11 +90,7 @@ const useStyles = makeStyles(theme => ({
   },
   // about section 1
   aboutSection: {
-    minHeight: '100vh',
-    marginTop: 50,
-    display: 'grid',
-    alignItems: 'center',
-    color: '#101010',
+    // color: '#101010',
     display: 'grid',
     gridTemplateColumns: '1fr 1fr'
   },
@@ -115,52 +129,89 @@ const useStyles = makeStyles(theme => ({
       }
     }
   },
-  // aboutSection2: {
-  //   minHeight: '100vh',
-  //   marginTop: 50,
-  //   position: 'relative',
-  //   display: 'grid',
-  //   alignItems: 'center',
-  //   justifyItems: 'center',
-  //   color: '#565656'
-  // },
-  aboutMe2: {
-    // maxWidth: '50%',
-    fontSize: '1.5rem',
-    zIndex: '1',
-    // marginTop: '10rem',
-    marginBottom: '5%',
-    padding: '6rem',
-    zIndex: '1',
 
+  aboutSection2: {
+    // position: 'relative',
+    color: '#000',
+    display: 'grid',
+    // gridTemplateColumns: '1fr 1fr',
+    placeItems: 'center'
+  },
+  bgImg2: {
+    zIndex: '-1',
+    '& img': {
+      opacity: '.5'
+    }
+    // marginRight: '-50px',
+  },
+  img1: {
+    position: 'absolute',
+    left: '50px',
+    top: '0',
+    width: '25%',
+    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+    filter: 'grayscale(100%)'
+  },
+  img2: {
+    position: 'absolute',
+    right: '0',
+    bottom: '0',
+    width: '25%',
+    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+    filter: 'grayscale(100%)'
+  },
+  img3: {
+    position: 'absolute',
+    right: '0',
+    top: '50px',
+    width: '25%',
+    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+    filter: 'grayscale(100%)'
+  },
+  img4: {
+    position: 'absolute',
+    left: '50%',
+    top: '-100px',
+    width: '10%',
+    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+    filter: 'grayscale(100%)'
+  },
+  img5: {
+    position: 'absolute',
+    right: '0%',
+    top: '30px',
+    width: '3%',
+    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+    filter: 'grayscale(100%)'
+  },
+  img6: {
+    position: 'absolute',
+    left: '4%',
+    bottom: '5%',
+    width: '15%',
+    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+    filter: 'grayscale(100%)'
+  },
+  img7: {
+    position: 'absolute',
+    left: '40%',
+    bottom: '5%',
+    width: '15%',
+    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+    filter: 'grayscale(100%)'
+  },
+  aboutMe2: {
+    fontSize: '2rem',
+    display: 'grid',
+    placeContent: 'center',
+    width: '60%',
+    '& div': {
+      // marginLeft: '-200px'
+    },
     '& h2': {
       display: 'inline'
-      // color: '#8b8b8b'
     }
   }
-
-  // bgImg2: {
-  //   display: 'grid',
-  //   justifyItems: 'end',
-  //   alignItems: 'center',
-  //   overflow: 'hidden',
-  //   height: '100%',
-  //   zIndex: '-1',
-
-  //   '& img': {
-  //     maxHeight: '80%',
-  //     maxWidth: '100%',
-  //     webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-  //     filter: 'grayscale(100%)',
-  //     transition: 'all .4s ease',
-  //     '&:hover': {
-  //       // webkitFilter: 'grayscale(35%)' /* Safari 6.0 - 9.0 */,
-  //       // filter: 'grayscale(35%)',
-  //       transform: 'scale(1.05)',
-  //       transition: 'all .4s ease'
-  //     }
-  //   }
-  // }
 }));
 
 export default useStyles;
