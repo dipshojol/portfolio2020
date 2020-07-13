@@ -35,59 +35,61 @@ const Home = () => {
     <>
       {/* Landing page */}
       <div className={classes.viewPortHW}>
-        <div className={classes.landingWrapper}>
-          <div className={classes.leftSection}>
-            <img src={myPhoto} alt="shojol" />
-          </div>
-          <div data-aos="fade-left" className={classes.rightSection}>
-            <div className={classes.greetings}>
-              <h5>Hello,_I'm</h5>
-              <h1 className={classes.firstChild}>Shojol</h1>
-              <h1 className={classes.lastChild}>Shake</h1>
-              <h6>I_create_websites_and_applications</h6>
+        <div className={classes.maxHW}>
+          <div className={classes.landingWrapper}>
+            <div className={classes.leftSection}>
+              <img src={myPhoto} alt="shojol" />
             </div>
-            <div className={classes.scrollDown}>
-              <img
-                className={classes.scrollDownImg}
-                src={scrollDown}
-                alt="scroll down"
-              />
+            <div data-aos="fade-left" className={classes.rightSection}>
+              <div className={classes.greetings}>
+                <h5>Hello,_I'm</h5>
+                <h1 className={classes.firstChild}>Shojol</h1>
+                <h1 className={classes.lastChild}>Shake</h1>
+                <h6>I_create_websites_and_applications</h6>
+              </div>
+              <div className={classes.scrollDown}>
+                <img
+                  className={classes.scrollDownImg}
+                  src={scrollDown}
+                  alt="scroll down"
+                />
+              </div>
             </div>
           </div>
         </div>
         {/* About me page 1 */}
-        <div className={classes.aboutSection}>
-          <div data-aos="fade-up" className={classes.aboutMe1}>
-            <div>
-              I'm a <h1>Frontend/MERN Developer</h1>
-              <br /> living in Toronto.
-              <br />I love to develop unique and robust web application and my
-              interest in web technology increasing since the day I started
-              working using web technologies. <br />
+        <div className={classes.maxHW}>
+          <div className={classes.aboutSection1}>
+            <div className={classes.aboutMe1}>
+              <div>
+                I'm a <h1>Frontend Developer</h1>
+                living in Toronto. I love to develop unique and robust web
+                application and my interest in web technology increasing since
+                the day I started working using web technologies. <br />
+              </div>
             </div>
-          </div>
-          <div data-aos="fade-down" className={classes.bgImg}>
-            <img src={photography} alt="traveling" />
+            <div className={classes.bgImg}>
+              <img src={photography} alt="traveling" />
+            </div>
           </div>
         </div>
         {/* About me page 2 */}
         <div className={classes.maxHW}>
           <div className={classes.aboutSection2}>
-            <div className={classes.bgImg2}>
-              {/* <img className={classes.img1} src={Untitled1} alt="traveling2" /> */}
-              <img className={classes.img2} src={Untitled2} alt="traveling2" />
-              <img className={classes.img3} src={Untitled3} alt="traveling2" />
-              <img className={classes.img4} src={Untitled4} alt="traveling2" />
-              {/* <img className={classes.img5} src={Untitled5} alt="traveling2" /> */}
-              <img className={classes.img6} src={Untitled6} alt="traveling2" />
-              <img className={classes.img7} src={Untitled7} alt="traveling2" />
-              <img className={classes.img1} src={Untitled8} alt="traveling2" />
-            </div>
+            {/* <div className={classes.bgImg2}> */}
+            {/* <img className={classes.img1} src={Untitled1} alt="traveling2" /> */}
+            <img className={classes.img2} src={Untitled2} alt="traveling2" />
+            <img className={classes.img3} src={Untitled3} alt="traveling2" />
+            {/* <img className={classes.img4} src={Untitled4} alt="traveling2" /> */}
+            {/* <img className={classes.img5} src={Untitled5} alt="traveling2" /> */}
+            <img className={classes.img6} src={Untitled6} alt="traveling2" />
+            <img className={classes.img7} src={Untitled7} alt="traveling2" />
+            <img className={classes.img1} src={Untitled8} alt="traveling2" />
+            {/* </div> */}
             <div className={classes.aboutMe2}>
               <div className={classes.aboutMeInner}>
-                I spend my daily life, Design and Developing new
-                websites/applications using the most advanced web technologies
-                such as, <br />
+                I Design and Developing new websites/applications using the most
+                advanced web technologies such as, <br />
                 <h2>Frontend</h2> engineering – ( vanilla
                 <span> JavaScript (ES6), ReactJS</span>, jQuery, CSS/Scss,
                 <span> Material UI</span>, Bootstrap,

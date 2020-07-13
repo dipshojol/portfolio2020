@@ -4,14 +4,17 @@ const useStyles = makeStyles(theme => ({
   viewPortHW: {
     width: '100%',
     display: 'grid',
-    placeItems: 'center'
+    placeItems: 'center',
+    '& img': {
+      webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
+      filter: 'grayscale(100%)'
+    }
   },
   maxHW: {
     maxWidth: '1800px',
     maxHeight: '1200px',
     height: '100vh',
     minHeight: '400px',
-    // border: '1px solid blue',
     overflow: 'hidden',
     display: 'grid',
     position: 'relative'
@@ -35,13 +38,7 @@ const useStyles = makeStyles(theme => ({
     overflow: 'hidden',
 
     '& img': {
-      // maxHeight: '45rem',
-      height: '100%',
-      // display: 'grid',
-      // justifySelf: 'end',
-      // marginTop: '7.5rem',
-      webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-      filter: 'grayscale(100%)'
+      height: '100%'
     }
   },
   rightSection: {
@@ -89,23 +86,19 @@ const useStyles = makeStyles(theme => ({
     height: 50
   },
   // about section 1
-  aboutSection: {
-    // color: '#101010',
+  aboutSection1: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr'
+    gridTemplateColumns: '1fr 1fr',
+    height: '100vh'
   },
   aboutMe1: {
-    // maxWidth: '50%',
-    fontSize: '4rem',
-    padding: '3rem',
-    zIndex: '1',
-    transition: 'all .4s ease',
-    // visibility: 'hidden',
-    opacity: 1,
+    fontSize: '2.5rem',
+    display: 'grid',
+    alignItems: 'center',
 
     '& h1': {
-      display: 'inline',
-      fontSize: '5rem'
+      display: 'inline'
+      // fontSize: '5rem'
     }
   },
   bgImg: {
@@ -118,8 +111,6 @@ const useStyles = makeStyles(theme => ({
       maxHeight: '100%',
       maxWidth: '50vw',
       alignSelf: 'center',
-      webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-      filter: 'grayscale(100%)',
       transition: 'all .4s ease',
       display: 'grid',
       justifySelf: 'end',
@@ -131,80 +122,55 @@ const useStyles = makeStyles(theme => ({
   },
 
   aboutSection2: {
-    // position: 'relative',
     color: '#000',
     display: 'grid',
-    // gridTemplateColumns: '1fr 1fr',
-    placeItems: 'center'
-  },
-  bgImg2: {
-    zIndex: '-1',
+    placeItems: 'center',
     '& img': {
-      opacity: '.5'
+      opacity: '.7',
+      zIndex: '-1',
+      position: 'absolute'
     }
-    // marginRight: '-50px',
   },
   img1: {
-    position: 'absolute',
-    left: '50px',
+    left: '-50px',
     top: '0',
-    width: '25%',
-    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-    filter: 'grayscale(100%)'
+    width: '25%'
   },
   img2: {
-    position: 'absolute',
     right: '0',
     bottom: '0',
-    width: '25%',
-    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-    filter: 'grayscale(100%)'
+    width: '25%'
   },
   img3: {
-    position: 'absolute',
     right: '0',
     top: '50px',
-    width: '25%',
-    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-    filter: 'grayscale(100%)'
+    width: '25%'
   },
   img4: {
-    position: 'absolute',
     left: '50%',
     top: '-100px',
-    width: '10%',
-    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-    filter: 'grayscale(100%)'
+    width: '10%'
   },
   img5: {
-    position: 'absolute',
     right: '0%',
     top: '30px',
-    width: '3%',
-    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-    filter: 'grayscale(100%)'
+    width: '3%'
   },
   img6: {
-    position: 'absolute',
     left: '4%',
     bottom: '5%',
-    width: '15%',
-    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-    filter: 'grayscale(100%)'
+    width: '15%'
   },
   img7: {
-    position: 'absolute',
-    left: '40%',
+    left: '60%',
     bottom: '5%',
-    width: '15%',
-    webkitFilter: 'grayscale(100%)' /* Safari 6.0 - 9.0 */,
-    filter: 'grayscale(100%)'
+    width: '15%'
   },
   aboutMe2: {
-    fontSize: '2rem',
+    fontSize: '1.25rem',
     display: 'grid',
     placeContent: 'center',
-    width: '60%',
+    width: '50%',
     '& div': {
       // marginLeft: '-200px'
     },
